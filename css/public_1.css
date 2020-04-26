@@ -1,0 +1,192 @@
+﻿@charset "utf-8";
+body,html{
+	text-align:center;
+	font:12px/21px "Microsoft yahei",Arial, Helvetica, sans-serif;
+	color:#333;
+}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+img{border:0;}
+small{font-size:14px;}
+a{ text-decoration:none; color:#323232;}
+a:hover{color:#f00;text-decoration:underline;}
+ul{list-style:outside;}
+ul li{ list-style:none;}
+ul li.title{ float:left;}
+ul li.more{ float:right; padding-right:8px;}
+.bold {FONT-WEIGHT: bold}
+.red,.red a {COLOR:red !important}
+.green,.green a {COLOR: green !important}
+.black,.black a {COLOR: black !important}
+.gray,.gray a {COLOR: gray !important}
+.yellow,.yellow a {COLOR: yellow !important}
+.orange,.orange a {COLOR:orange !important}
+.blue,.blue a {COLOR:blue !important}
+.blue2,.blue2 a {COLOR: #0077cc !important}
+.khaki,.khaki a {COLOR: #cc5e05 !important;}
+.white,.white a {COLOR:white !important}
+.clear{clear:both !important;height:0 !important;width:0 !important;line-height:0 !important;}
+.pointer{cursor:pointer;}
+.n_top{margin-top:0 !important;border-top:0 !important;}
+.n_right{margin-right:0 !important;}
+.hide{display:none;}
+.fl{float:left;}
+.fr{float:right;}
+.txtl{text-align:left;}
+.txtr{text-align:right;}
+table{border-collapse:collapse;border-spacing:0}
+canvas {-webkit-user-select: none;}
+.hidden{overflow:hidden;}
+.center{text-align:center;}
+/*头部*/
+#top_0{width:100%;min-width:1250px;height:30px;overflow:hidden;background:#f5f5f5;border-bottom:1px solid #eee;color:#666;}
+.top_0{width:1250px;height:30px;margin:0px auto;font:12px/30px "Microsoft yahei";background:#f5f5f5;border-bottom:1px solid #eee;}
+  .t_welcome{float:left;}
+  .t_nav{float:right;}
+  #top_0 a{color:#666;}
+.mc-top{width:1250px;height:60px;margin:0 auto;position:relative;}
+.t-logo{
+	position: absolute;
+	left: 0;
+	top: 8px;
+}
+.t-service{position:absolute;min-width:260px;height:60px;font:24px/63px "Microsoft yahei";color:#d7201f;background:url(../images/t_s_bg_1.png) no-repeat right bottom;right:0;bottom:0;}
+
+/*底部*/
+.mc-bottom-bg{float:left;width:100%;min-width:1250px;clear:both;margin:10px 0 0;padding:10px 0;border-top:1px solid #eee;}
+.mc-nav{width:1250px;margin:0 auto;font:14px/27px "Microsoft yahei";}
+/*漂浮框------------------开始--------------*/
+.mask_layer{
+z-index:998;
+position:fixed;
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+_width:expression(body.clientWidth);
+_height:expression(documentElement.clientHeight);
+_position:absolute;
+_top: expression(documentElement.scrollTop);
+overflow:visible;
+text-align:center;
+background:url(../images/mask_layer_bg_1.png);
+}
+.pop_box{
+z-index:999;
+position:fixed;
+left:0px;
+top:100px;
+width:100%;
+_position:absolute;
+_top: expression(documentElement.scrollTop + 100);
+overflow:visible;
+text-align:center;
+float:left;width:500px;text-align:left;padding:10px;background:#fff;box-shadow:0 0 8px #000;border-radius:10px;
+}
+.pop_content{float:left;width:100%;text-align:left;}
+.pop_close{position:absolute;top:2px;right:2px;}
+.pop_title{font:26px/2 "Microsoft yahei";letter-spacing:3px;background:#fff;color:#e41616;text-align:center;}
+.pop_cc{background:#fff;}
+#pop_cc{padding:10px;text-align:left;line-height:26px;}
+#pop_cc .text{border:1px solid #999;padding:5px;height:80px;overflow:auto;line-height:20px;width:400px;font-size:13px;}
+#pop_cc div.button{height:30px;padding-top:10px;}
+.p-tips{font:20px/2 "Microsoft yahei";}
+/*漂浮框------------------结束--------------*/
+/*提示框----开始*/
+#pop-win{
+z-index:1000;
+position:fixed;
+top:2px;
+left:0px;
+width:100%;
+height:1px;
+_position:absolute;
+_top: expression(documentElement.scrollTop);
+overflow:visible;
+text-align:center;
+}
+#pop-win dl{margin:0px auto;width:350px;padding:8px 10px 30px;text-align:left;}
+#pop-win dl dt{width:100%;height:20px;}
+#pop-win dl dd{width:100%;font-size:14px;font-weight:bold;padding-top:8px;line-height:22px;}
+#pop-win dl dt span{float:left;}
+#pop-win dl dt a{float:right;font-weight:bold;text-decoration:none;}
+#pop-win dl.ok{border:3px solid #079207;background:#EFFFEF;}
+#pop-win dl.ok dt{color:#079207;border-bottom:1px dashed #079207;}
+#pop-win dl.ok dd{color:#079207;}
+#pop-win dl.error{border:3px solid #F59814;background:#FFFFCC;}
+#pop-win dl.error dt{color:#D03B1E;border-bottom:1px dashed #F59814;}
+#pop-win dl.error dd{color:#D03B1E;}
+/*提示框----结束*/
+/*文本输入框提示框----开始*/
+#pop-txt-win{
+z-index:10000;
+position:fixed;
+top:0;
+left:0;
+min-width:200px;
+max-width:300px;
+height:auto;
+padding:6px;
+overflow:visible;
+text-align:left;
+background:#fa9540;
+border-radius:10px 10px 10px 0;
+box-shadow:0 0 10px #888;
+display:none;
+color:#fff;
+font:12px/20px "宋体";
+word-break:break-all;
+word-wrap: break-word;  
+}
+/*文本输入框提示框----结束*/
+/*输入框下拉提示框----开始*/
+#pop-xl-win{
+z-index:10000;
+position:fixed;
+top:0;
+left:0;
+min-width:60px;
+height:auto;
+padding:3px;
+overflow:visible;
+text-align:left;
+background:#fff;
+box-shadow:0 0 10px #888;
+display:none;
+color:#333;
+font:12px/20px "宋体";
+}
+#pop-xl-win p{padding-left:6px;cursor:pointer;}
+#pop-xl-win p:hover{background:#e53130;color:#fff;}
+/*输入框下拉提示框----结束*/
+/*右键弹出菜单*/
+#pop_right_click_box
+{
+	z-index:10001;
+	position:fixed;
+	top:0;
+	left:0;
+	min-width:150px;
+	max-width:300px;
+	height:auto;
+	padding:6px;
+	overflow:visible;
+	text-align:left;
+	background:#f5f5f5;
+	border:1px solid #979797;
+	box-shadow:3px 3px 10px #888;
+	display:none;
+	color:#333;
+	font:12px/25px "宋体";
+	word-break:break-all;
+	word-wrap: break-word;  
+}
+#pop_right_click_box ul{width:100%;}
+#pop_right_click_box ul li{width:100%;height:25px;overflow:hidden;border-top:1px solid #fff;border-bottom:1px solid #e0e0e0;text-indent:6px;border-radius:3px;}
+#pop_right_click_box ul li:first-child{border-top:0;}
+#pop_right_click_box ul li:last-child{border-bottom:0;}
+#pop_right_click_box ul li:hover{
+  background: -webkit-linear-gradient(#d2e3ec , #e7eef6,#d2e3ec); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#d2e3ec , #e7eef6,#d2e3ec); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#d2e3ec , #e7eef6,#d2e3ec); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#d2e3ec , #e7eef6,#d2e3ec); /* 标准的语法 */
+}

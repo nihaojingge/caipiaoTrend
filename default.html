@@ -1,0 +1,1298 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title class="titleName">全彩科技</title>
+    <!--<link rel="stylesheet" type="text/css" href="css/reset.css"/>-->
+    <link rel="stylesheet" type="text/css" href="css/public_2.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/popup.css"/>
+    <link rel="stylesheet" type="text/css" href="css/reg_2.css"/>
+</head>
+<style>
+    #zidongkj_time {
+        display: none;
+    }
+
+    .color {
+        background: #f4e0c5 !important;
+        border-right: 1px solid #fff !important;
+        border-bottom: 1px solid #fff !important;
+    }
+    .Jsq_nums{
+        height: 290px;
+        overflow-y: scroll;
+        float: left;
+    }
+
+    .li_new {
+        background: #e5d2b1 !important;
+    }
+    #Sc-box{
+        top:20%;
+    }
+
+</style>
+<body style="padding-bottom: 200px;">
+<!--head1-->
+<div id="top_0">
+    <div class="top_0">
+        <div class="t_welcome">
+            服务QQ：330163376@qq.com
+        </div>
+        <div class="t_nav">
+            <a class="blue" href="javascript:;" title="进入会员中心">
+                测试
+            </a>
+            &nbsp;&nbsp;
+            <a href="../user/loginout.do" class="red">
+                退出登陆
+            </a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="javascript:">
+                修改密码
+            </a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="javascript:">
+                教学视频
+            </a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="javascript:;">
+                在线客服
+            </a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://1000w.us/">
+                全彩官网
+            </a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="javascript:;">
+                代理申请
+            </a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="javascript:;" class="blue">
+                文件管理
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--head2-->
+<div class="mc-top">
+    <div class="t-logo">
+        <img src="picture/logo2.png" height="43" alt="全彩科技">
+    </div>
+    <div class="t-service">
+        策 略 赢 天 下
+    </div>
+</div>
+
+<!--3导航栏-->
+<div class="mc-nav-bg">
+    <div class="mc-nav">
+        <div class="mc-nav-t" id="mc-nav-t">
+            <div class="hide" id="mc-nav-t-1" style="display: block;">
+                <a href="../user/trend.do?cityid=sd11x5" tag="sd11x5" name="selectCity" class="city tag">
+                    <img src="picture/sd11x5.gif" alt="" height="18">
+                    山东11选5
+                </a>
+
+                <a href="../user/trend.do?cityid=jx11x5" tag="jx11x5" name="selectCity" class="city">
+                    <img src="picture/jx11x5.gif" alt="" height="18">
+                    江西11选5
+                </a>
+
+                <a href="../user/trend.do?cityid=gd11x5" name="selectCity" tag="gd11x5" class="city">
+                    <img src="picture/gd11x5.gif" alt="" height="18">
+                    广东11选5
+                </a>
+
+                <a href="../user/trend.do?cityid=sh11x5" tag="sh11x5" name="selectCity" class="city">
+                    <img src="picture/sh11x5.gif" alt="" height="18">
+                    上海11选5
+                </a>
+            </div>
+            <div id="mc-nav-t-2" style="display: none;">
+            </div>
+            <div id="mc-nav-t-3" style="display: none;">
+            </div>
+            <span title="点击关闭" class="close pointer">
+						<img src="picture/btn_close.png">
+					</span>
+        </div>
+    </div>
+</div>
+
+
+<!--4main-->
+<div class="mc-main">
+    <!--4.1main top-->
+    <div id="mc-select-piao" class=" ">
+        <div class="mc-select-piao">
+            <div class="mc-select-box">
+                <div id="mc-select-cz" class="hide">
+                    <div class="cz-title">广<br>东<br>11<br>选<br>5</div>
+                </div>
+                <div class="mc-select-l">
+                    <div class="mc-s-1">
+                        <div id="Latest_kaijianghao">
+                            <p class="kj-02">02</p>
+                            <p class="kj-05">05</p>
+                            <p class="kj-08">08</p>
+                            <p class="kj-07">07</p>
+                            <p class="kj-11">11</p>
+                        </div>
+                    </div>
+                    <div class="mc-s-3">
+                        <span class="fl" id="Latest_qihao">2018121882</span>
+                        <label>
+                            <input type="checkbox" name="zidongkj" id="zidongkj" value="1" class="checkbox-1">
+                            <span>
+								自动开奖
+							</span>
+                        </label>
+                        
+                        
+                        <div>
+                            <font id="zidongkj_time">下期开奖还有:
+                                <b id="t_d"></b>
+                                <b id="t_h"></b>
+                                <b id="t_m"></b>
+                                <b id="t_s"></b>
+                            </font>
+                            <font id="zidongkj_text" class="red hide">
+                                <img src="picture/loading.gif">
+                                开奖中，请稍候！
+                            </font>
+                            <span id="kjhm_zdy">
+										手动输入开奖号进行验证↓
+									</span>
+                            <p id="kjhm_zdy_p" class="hide">
+                                格式：20170816-17-07,06,05,01,11
+                                <br>
+                                格式说明：日期-期号-中奖号码；多个请换行
+                                <textarea name="textarea1" id="kjhm_zdy_text">
+										</textarea>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mc-select-r">
+                    <dl class="mc-notice hide" id="mc-notice" style="display: none;">
+                        <a title="点击关闭" href="javascript:void(0);" class="pop-close">
+                            <img src="picture/btn_close.png">
+                        </a>
+                        <dt>最新公告：</dt>
+                        <dd>
+                            <img src="picture/btn_close.png">
+                        </dd>
+                    </dl>
+                    <div class="mc-select-wf">
+                        <dl class="mc-s-0 s-1">
+                            <dt>
+                                <span id="kj_wanfa">任选五</span>
+                                <i class="wanfa">
+                                    玩&nbsp;法
+                                </i>
+                            </dt>
+                            <dd class="Kj_l_list" value="Kj_l_list" style="display: none;">
+                                <a href="javascript:" value="1" class="on tag">任选五</a>
+                                <a href="javascript:" value="2" class="on">任选二</a>
+                            </dd>
+                        </dl>
+                        <dl class="mc-s-0 s-2">
+                            <dt>
+                                <span id="danma">
+                                    2码
+                                </span>
+                                <i class="danma">
+                                    胆&nbsp;码
+                                </i>
+                            </dt>
+                            <dd value="Kj_xma" style="display: none;">
+                                <a href="javascript:" value="2" class="on tag">2码</a>
+                            </dd>
+                        </dl>
+                        <dl class="mc-s-0 s-3">
+                            <dt>
+                                <span class="cx_num">0个号码</span>
+                                <i class="chuxian">出&nbsp;现</i>
+                            </dt>
+                            <dd class="Kj_pipei_z" value="Kj_pipei_z" style="display: none;">
+                                <a href="javascript:" value="0" class="on tag">
+                                    0个号码
+                                </a>
+                                <a href="javascript:" value="2" class="on">
+                                    2个号码
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl class="mc-s-0 s-4">
+                            <dt>
+                                <span class="shuju"></span>
+                                <i class="tuijian">推&nbsp;荐</i>
+                            </dt>
+                            <dd class="shuju_xz" value="Kj_OrderType" style="display: none;">
+                                <a href="javascript:" value="1" class="on">数据一</a>
+                                <a href="javascript:" value="2" class="on tag">数据二</a>
+                                <a href="javascript:" value="3" class="on">数据三</a>
+                            </dd>
+                        </dl>
+                        <div class="mc-s-1 hide">
+                            <input type="hidden" name="Kj_l_list" id="Kj_l_list" value="0" size="8">
+                            <input type="hidden" name="Kj_pipei_z" id="Kj_pipei_z" value="0" size="8">
+                            <input type="hidden" name="Kj_OrderType" id="Kj_OrderType" value="3" size="8">
+                            <input type="hidden" name="Kj_xma" id="Kj_xma" value="2" size="8">
+                        </div>
+                    </div>
+                    <div class="mc-line">
+                    </div>
+                    <div class="mc-s-2">
+                        <div class="fl">
+									<span class="bold">
+										标识：
+									</span>
+                            <label>
+                                <input type="checkbox" name="hao_check" value="l_h" class="checkbox-1">
+                                <span>
+											邻号&nbsp;
+										</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="hao_check" value="ch" class="checkbox-1">
+                                <span>
+											重号&nbsp;
+										</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="hao_check" value="lh" class="checkbox-1">
+                                <span>
+											连号&nbsp;
+										</span>
+                            </label>
+                        </div>
+                        <div class="fr">
+									<span>
+										&nbsp;&nbsp;统计期数：
+									</span>
+                            <input type="text" name="Kj_qishu" id="Kj_qishu" size="4" maxlength="4"
+                                   onfocus="beforeNum(this, 1)"
+                                   onblur="inputNumV(this, 1, '统计期数不能小于显示期数')"
+                                   onkeyup="limitInput(this);"
+                                   value="30" class="input-1">
+                            <span>
+										显示期数：
+									</span>
+                            <input type="text" name="Kj_qishu_n" id="Kj_qishu_n" size="4" maxlength="4"
+                                   value="30" class="input-1" onfocus="pop_txt_box(this, 1)"
+                                   onblur="pop_txt_box_close(this, 1, '当前显示期数不能大于查看期数');"
+                                   onkeyup="limitInput(this);">
+                            <input type="button" name="but3" value="更新" class="s-but-1" id="s_gengxin">
+                            <input type="button" name="but3" value="刷新" class="s-but-1" id="s_shuanx">
+                            <input type="button" name="but4" value="后退" class="s-but-1" id="s_houtui">
+                            <input type="text" name="Kj_htqs" id="Kj_htqs" size="4" maxlength="4"
+                                   value="1" class="input-1"
+                                   onkeyup="limitInput(this);">
+                            <input type="button" name="but3" value="前进" class="s-but-1" id="s_qianjin">
+                            <input type="button" name="but3" value="二次验证" class="s-but-1" id="Yz_2_but">
+                            <input type="button" name="but3" value="生成" class="s-but-1 s-but-sc">
+                        </div>
+                    </div>
+                    <a href="javascript:" id="More_but" class="Bei_tou">
+                        倍投计算器
+                    </a>
+                </div>
+            </div>
+            <div class="mc-i-line"></div>
+        </div>
+    </div>
+
+    <!--4.2main data-->
+    <div class="mc-list-box" id="mc-list-box">
+        <!--main data left-->
+        <div class="mc-list-left" id="mc-list-left">
+            <!--表格 head-->
+            <div class="mc-list-t" style="top: 0px;">
+                <ul class="ul-t" id="mc-list-left-t">
+                    <li class="li-t">
+                        开奖数据
+                    </li>
+                    <li class="li-l">
+                        1
+                    </li>
+                    <li class="li-l">
+                        2
+                    </li>
+                    <li class="li-l">
+                        3
+                    </li>
+                    <li class="li-l">
+                        4
+                    </li>
+                    <li class="li-l">
+                        5
+                    </li>
+                    <li class="li-l">
+                        6
+                    </li>
+                    <li class="li-l">
+                        7
+                    </li>
+                    <li class="li-l">
+                        8
+                    </li>
+                    <li class="li-l">
+                        9
+                    </li>
+                    <li class="li-l">
+                        10
+                    </li>
+                    <li class="li-l">
+                        11
+                    </li>
+                </ul>
+            </div>
+            <!--表格 cnt-->
+            <div id="mc-list-left-cont">
+                <ul class="list-left1">
+                    <li class="li-t">
+                        171012-60-
+                        <font class="bold red">
+                            04,09,01,08,03
+                        </font>
+                    </li>
+                    <li class="li-l">
+                        <p class="zj ">
+                            01
+                        </p>
+                    </li>
+                    <li class="li-l">
+                        2
+                    </li>
+                    <li class="li-l">
+                        <p class="zj " tlh="1">
+                            03
+                        </p>
+                    </li>
+                    <li class="li-l">
+                        <p class="zj zj_1 zj_x5" tlh="1">
+                            04
+                        </p>
+                    </li>
+                    <li class="li-l">
+                        1
+                    </li>
+                    <li class="li-l">
+                        1
+                    </li>
+                    <li class="li-l">
+                        1
+                    </li>
+                    <li class="li-l">
+                        <p class="zj " tlh="1">
+                            08
+                        </p>
+                    </li>
+                    <li class="li-l">
+                        <p class="zj " tlh="1">
+                            09
+                        </p>
+                    </li>
+                    <li class="li-l">
+                        1
+                    </li>
+                    <li class="li-l">
+                        4
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li class="li-t l-m l-kh l-kh_l">
+                        20期冷热
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lr1">
+                        2
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lr2">
+                        5
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lr3">
+                        4
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lr4">
+                        2
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lr5">
+                        4
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lr6">
+                        4
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lr7">
+                        4
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lr8">
+                        3
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lr9">
+                        3
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lr10">
+                        3
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lr11">
+                        5
+                    </li>
+                </ul>
+                <ul>
+                    <li class="li-t l-m" id="yilou">
+                        30期最大遗漏期数
+                    </li>
+                    <li class="li-l l-m l-xz yl1" val="4" t-val="1">
+                        4
+                    </li>
+                    <li class="li-l l-m l-xz yl2" val="2" t-val="2">
+                        2
+                    </li>
+                    <li class="li-l l-m l-xz yl3" val="4" t-val="3">
+                        4
+                    </li>
+                    <li class="li-l l-m l-xz yl4" val="6" t-val="4">
+                        6
+                    </li>
+                    <li class="li-l l-m l-xz yl5" val="4" t-val="5">
+                        4
+                    </li>
+                    <li class="li-l l-m l-xz yl6" val="6" t-val="6">
+                        6
+                    </li>
+                    <li class="li-l l-m l-xz yl7" val="5" t-val="7">
+                        5
+                    </li>
+                    <li class="li-l l-m l-xz yl8" val="9" t-val="8">
+                        9
+                    </li>
+                    <li class="li-l l-m l-xz yl9" val="3" t-val="9">
+                        3
+                    </li>
+                    <li class="li-l l-m l-xz yl10" val="4" t-val="10">
+                        4
+                    </li>
+                    <li class="li-l l-m l-xz yl11" val="7" t-val="11">
+                        7
+                    </li>
+                </ul>
+                <ul>
+                    <li class="li-t l-m li-tag" id="zhongjiang">
+                        30期中奖次数
+                    </li>
+                    <li class="li-l l-m li-tag zj1">
+                        12
+                    </li>
+                    <li class="li-l l-m li-tag zj2">
+                        19
+                    </li>
+                    <li class="li-l l-m li-tag zj3">
+                        14
+                    </li>
+                    <li class="li-l l-m li-tag zj4">
+                        9
+                    </li>
+                    <li class="li-l l-m li-tag zj5">
+                        16
+                    </li>
+                    <li class="li-l l-m li-tag zj6">
+                        15
+                    </li>
+                    <li class="li-l l-m li-tag zj7">
+                        15
+                    </li>
+                    <li class="li-l l-m li-tag zj8">
+                        10
+                    </li>
+                    <li class="li-l l-m li-tag zj9">
+                        17
+                    </li>
+                    <li class="li-l l-m li-tag zj10">
+                        12
+                    </li>
+                    <li class="li-l l-m li-tag zj11">
+                        11
+                    </li>
+                </ul>
+                <ul>
+                    <li class="li-t l-m l-kh l-kh_l" id="lianchu">
+                        30期最大连出次数
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lj1">
+                        2
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lj2">
+                        5
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lj3">
+                        4
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lj4">
+                        2
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lj5">
+                        4
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lj6">
+                        4
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lj7">
+                        4
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lj8">
+                        3
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lj9">
+                        3
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lj10">
+                        3
+                    </li>
+                    <li class="li-l l-m l-kh l-kh_l lj11">
+                        5
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="mc-list-right" id="mc-list-right">
+            <!--<!--表格 head-->
+            <div class="mc-list-t" style="width: 2213px; top: 0px;">
+                <ul class="ul-t" id="mc-list-right-t">
+                </ul>
+            </div>
+            <div id="mc-list-right-cont" style="width: 2213px;">
+                <ul class=" ">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--4.3 二次验证   height: 572px; width: 1044px;-->
+    <div id="Yz-2-box" class="hide" style="height:90%; width:96%; top: 10px; left: 10px; display: none;">
+        <a title="点击关闭" href="javascript:void(0);" class="pop-close guanb_2yz">
+            <img src="picture/btn_close.png">
+        </a>
+        <div class="pop-b-title" style="width: 101%;padding-left:19px;">
+					<span class="valid_city">
+						广东11选5
+					</span>
+            -二次验证结果
+        </div>
+        <div id="Yz-2-select">
+            <div class="fl">
+                设置参数：玩法：
+                <font class="red play_type"></font>
+                &nbsp;&nbsp;胆码：
+                <font class="red dan_ma">
+                    2码
+                </font>
+                &nbsp;&nbsp;出现：
+                <font class="red">
+                    0个号码
+                </font>
+                &nbsp;&nbsp;&nbsp;推荐：
+                <font class="red yl_shuju">
+                    数据二
+                </font>
+                &nbsp;&nbsp;统计期数：
+                <font class="red yl_tjnum">
+                    30
+                </font>
+                &nbsp;&nbsp;显示期数：
+                <font class="red yl_xsnum">
+                    30
+                </font>
+            </div>
+            <div class="fr">
+                查看期数：
+                <input type="text" name="Yz_2_num2" id="Yz_2_num2" size="3" maxlength="4" onfocus="beforeNum(this, 2)"
+                       onblur="inputNumV(this, 2, '统计期数不能小于显示期数')" value="35" class="input-1">
+                &nbsp; 当前显示期数：
+                <input type="text" name="pop_yz_num" id="pop_yz_num" size="3" maxlength="4"
+                       onfocus="pop_txt_box(this, 2)" onblur="pop_txt_box_close(this, 2, '当前显示期数不能大于查看期数');" value="30"
+                       class="input-1">
+                &nbsp;
+                <label>
+                    <input type="radio" name="pop_yz_radio" value="1" checked="checked">
+                    <span>
+								号码&nbsp;&nbsp;
+							</span>
+                </label>
+                <label>
+                    <input type="radio" name="pop_yz_radio" value="2">
+                    <span>
+								遗漏&nbsp;&nbsp;
+							</span>
+                </label>
+                &nbsp;&nbsp;排序：
+                <select name="pop_yz_px" class="s-select-1" id="pop_yz_px">
+                    <option value="1" selected="selected">
+                        1.数据一
+                    </option>
+                    <option value="2">
+                        2.数据二
+                    </option>
+                    <option value="3">
+                        3.走势
+                    </option>
+                </select>
+                &nbsp;
+                <input type="button" name="but3" value="刷新" class="s-but-1" id="validate_flush">
+            </div>
+        </div>
+        <div id="Yz-2-list" onselectstart="return false" style="height: 85%">
+            <div class="Yz-2-list" style="width: 2211px;">
+                <ul class="ul-t" style="width: 2211px; ">
+                    <li class="li-t">
+                        开奖数据
+                    </li>
+                    <li class="li-2">
+                        1
+                    </li>
+                    <li class="li-2">
+                        2
+                    </li>
+                    <li class="li-2">
+                        3
+                    </li>
+                    <li class="li-2">
+                        4
+                    </li>
+                    <li class="li-2">
+                        5
+                    </li>
+                    <li class="li-2">
+                        6
+                    </li>
+                    <li class="li-2">
+                        7
+                    </li>
+                    <li class="li-2">
+                        8
+                    </li>
+                    <li class="li-2">
+                        9
+                    </li>
+                    <li class="li-2">
+                        10
+                    </li>
+                    <li class="li-2">
+                        11
+                    </li>
+                    <li class="li-2">
+                        12
+                    </li>
+                    <li class="li-2">
+                        13
+                    </li>
+                    <li class="li-2">
+                        14
+                    </li>
+                    <li class="li-2">
+                        15
+                    </li>
+                    <li class="li-2">
+                        16
+                    </li>
+                    <li class="li-2">
+                        17
+                    </li>
+                    <li class="li-2">
+                        18
+                    </li>
+                    <li class="li-2">
+                        19
+                    </li>
+                    <li class="li-2">
+                        20
+                    </li>
+                    <li class="li-2">
+                        21
+                    </li>
+                    <li class="li-2">
+                        22
+                    </li>
+                    <li class="li-2">
+                        23
+                    </li>
+                    <li class="li-2">
+                        24
+                    </li>
+                    <li class="li-2">
+                        25
+                    </li>
+                    <li class="li-2">
+                        26
+                    </li>
+                    <li class="li-2">
+                        27
+                    </li>
+                    <li class="li-2">
+                        28
+                    </li>
+                    <li class="li-2">
+                        29
+                    </li>
+                    <li class="li-2">
+                        30
+                    </li>
+                    <li class="li-2">
+                        31
+                    </li>
+                    <li class="li-2">
+                        32
+                    </li>
+                    <li class="li-2">
+                        33
+                    </li>
+                    <li class="li-2">
+                        34
+                    </li>
+                    <li class="li-2">
+                        35
+                    </li>
+                    <li class="li-2">
+                        36
+                    </li>
+                    <li class="li-2">
+                        37
+                    </li>
+                    <li class="li-2">
+                        38
+                    </li>
+                    <li class="li-2">
+                        39
+                    </li>
+                    <li class="li-2">
+                        40
+                    </li>
+                    <li class="li-2">
+                        41
+                    </li>
+                    <li class="li-2">
+                        42
+                    </li>
+                    <li class="li-2">
+                        43
+                    </li>
+                    <li class="li-2">
+                        44
+                    </li>
+                    <li class="li-2">
+                        45
+                    </li>
+                    <li class="li-2">
+                        46
+                    </li>
+                    <li class="li-2">
+                        47
+                    </li>
+                    <li class="li-2">
+                        48
+                    </li>
+                    <li class="li-2">
+                        49
+                    </li>
+                    <li class="li-2">
+                        50
+                    </li>
+                    <li class="li-2">
+                        51
+                    </li>
+                    <li class="li-2">
+                        52
+                    </li>
+                    <li class="li-2">
+                        53
+                    </li>
+                    <li class="li-2">
+                        54
+                    </li>
+                    <li class="li-2">
+                        55
+                    </li>
+                </ul>
+                <div class="yl_data">
+                    <ul class="ul-tr">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--生成-->
+<div id="Sc-box" style="display: none; right: 20%;">
+    <a title="点击关闭" href="javascript:void(0);"
+       class="pop-close sc_closex">
+        <img src="picture/btn_close.png"/>
+    </a>
+    <div class="pop-b-title" id="sc_title">
+        <span class="cityname">
+            广东11选5
+        </span>
+        -生成
+    </div>
+    <div class="Sc-main-2">
+        <div class="Sc-title">
+            胆码组合：
+        </div>
+        <textarea name="textarea1" class="Sc-list Sc-list-1" id="Sc-dmzh">
+				</textarea>
+        <div class="Sc-title">
+            胆码出现个数：
+        </div>
+        <div class="Sc-list Sc-list-1" id="Sc-dmgs">
+        </div>
+        <div class="Sc-title">
+            汇总条件
+            <input type="text" name="text21" size="4" id="Sc-fa-title" maxlength="50"
+                   value="1">
+            <input type="button" name="but3" id="Sc-add-fa" value="位置验证">
+        </div>
+        <div class="Sc-list Sc-list-2" id="Sc-hztj">
+        </div>
+    </div>
+    <div class="Sc-main-3">
+        <div class="div div-3">
+            <input type="button" name="but3" class="input-1" id="buzhou1" value="步骤一">
+        </div>
+        <div class="div div-4">
+            <input type="button" name="but3" class="input-1" id="buzhou2"  value="步骤二">
+        </div>
+        <div class="div div-5">
+            <input type="button" name="but3" id="clean_all" class="input-2" value="清空页面所有条件">
+        </div>
+        <div class="Sc-title">
+            结果：
+            <span class="red" id="Sc-jieguo-num">
+					</span>
+        </div>
+        <div class="div div-9 dov_row">
+            <input type="button" name="but3" class="input-3" id="sc_hm" value="生成号码">&nbsp;
+            <input type="button" name="but3" class="input-3" value="全部选中">
+        </div>
+    </div>
+    <div class="Sc-main-4">
+				<textarea name="textarea1" class="Sc-text1" id="Sc-jieguo">
+				</textarea>
+    </div>
+    <div class="Sc-main-5">
+        <div class="Sc-title">
+            记录：
+        </div>
+        <div class="Sc-list" id="Sc-jilu-list">
+        </div>
+        <div class="Sc-title">
+            期数：
+            <input type="button" name="but3" class="input-1 fr" id="Sc-ckzrc" value="总容错查看">
+        </div>
+        <div class="Sc-list" id="Sc-yz-list">
+        </div>
+        <div class="div-2 fl">
+            <input type="button" name="but3" id="clean_hanging" class="input-1 fl" value="清统计">
+            <input type="text" name="text21" id="Yz_guoqu_n" size="4" maxlength="3"
+                   value="100">
+            <input type="button" name="but3" id="gd_yz" class="input-1" value="固定验证">
+        </div>
+        <div class="div-3 fl">
+					<textarea name="textarea1" id="Sc-yz-cont" class="Sc-text1">
+					</textarea>
+            <div class="Sc-list" id="Sc-fa-list">
+            </div>
+        </div>
+    </div>
+</div>
+<!--遮罩-->
+<div class="mask" id="mask"></div>
+
+<!--倍投计算器-->
+<div id="Jsq-box" style="display: none; right: 20%;">
+    <a title="点击关闭" href="javascript:void(0);"
+       class="pop-close Bei_tou_close">
+        <img src="picture/btn_close.png"/>
+    </a>
+    <div class="pop-b-title" id="bt_title">
+        <span class="cityname">
+            广东11选5
+        </span>
+        -倍投计算器
+    </div>
+    <div class="Jsq-box-1">
+        <div>
+            <span>
+                彩种玩法
+            </span>
+            <select name="Kj_xma" class="s-select-1" id="Jsq_wf"
+                    onchange="$('#Jsq_jj').val(this.options[this.selectedIndex].value)">
+                <option value="6" selected="selected">
+                    任二
+                </option>
+                <option value="540">
+                    任五
+                </option>
+            </select>
+        </div>
+        <div>
+            <span>
+                单倍奖金
+            </span>
+            <input type="text" name="Jsq_jj" id="Jsq_jj" size="3" maxlength="10" value="6"
+                   class="input-1 red">
+            <span>
+                元
+            </span>
+        </div>
+        <div>
+            <span>
+                已经投入
+            </span>
+            <input type="text" name="Jsq_yjtr" id="Jsq_yjtr" size="3" maxlength="10"
+                   value="0" class="input-1">
+            <span>
+                元
+            </span>
+        </div>
+    </div>
+    <div class="Jsq-box-1">
+        <div>
+            <span>
+                投注注数
+            </span>
+            <input type="text" name="Jsq_jj" id="Jsq_zs" size="3" maxlength="10" onblur="inputNumV(this,1)"
+                   value="1" class="input-1">
+            <span>
+                注
+            </span>
+        </div>
+        <div>
+            <span>
+                计划期数
+            </span>
+            <input type="text" name="Jsq_jj" id="Jsq_qs" size="3" maxlength="10" onblur="inputNumV(this,1)"
+                   value="10" class="input-1">
+            <span>
+                期
+            </span>
+        </div>
+        <div>
+            <span>
+                起始倍数
+            </span>
+            <input type="text" name="Jsq_yjtr" id="Jsq_bs" size="3" maxlength="10"
+                   value="1" class="input-1">
+            <span>
+                倍
+            </span>
+        </div>
+    </div>
+    <dl id="Jsq-types">
+        <dt>
+            <span class="pointer tag">按利润率计算</span>
+            <span class="pointer">按利润计算</span>
+        </dt>
+        <dd>
+            <ul class="lilv">
+                <li class="tag">
+                    <label class="pointer">
+                        <input type="radio" name="radio" checked="checked" class="pointer fl"
+                               value="1">
+                        <span>
+                            全程盈利润率&nbsp;&nbsp;&nbsp;
+                            <input class="text input-xmini" onblur="inputNumV(this,1)" value="50"
+                                   type="text" id="win_percent">
+                            &nbsp;%
+                        </span>
+                    </label>
+                </li>
+                <li >
+                    <label class="pointer">
+                        <input type="radio" name="radio" class="pointer fl" value="2">
+                        <span>
+                            分段盈利润率&nbsp;&nbsp;&nbsp;前
+                            <input name="win_percent_i" id="win_percent_i" onblur="inputNumV(this,1)"
+                                   value="5" type="text" disabled="disabled">
+                            &nbsp;期利润率
+                            <input name="pre_win_percent" id="pre_win_percent" onblur="inputNumV(this,1)"
+                                   value="50" type="text" disabled="disabled">
+                            &nbsp;%，之后利润率
+                            <input name="next_win_percent" id="next_win_percent" onblur="inputNumV(this,1)"
+                                   value="30" type="text" disabled="disabled">
+                            &nbsp;%
+                        </span>
+                    </label>
+                </li>
+            </ul>
+            <ul class="hide lilv">
+                <li class="tag">
+                    <label class="pointer">
+                        <input type="radio" name="radio"  class="pointer fl"
+                               value="3">
+                        <span>
+                            全程利润&nbsp;&nbsp;&nbsp;
+                            <input name="win_pre" id="win_pre" value="100" onblur="inputNumV(this,1)"
+                                   type="text">
+                            &nbsp;元
+                        </span>
+                    </label>
+                </li>
+                <li >
+                    <label class="pointer">
+                        <input type="radio" name="radio" class="pointer fl" value="4" >
+                        <span>
+                            分段利润&nbsp;&nbsp;&nbsp;前
+                            <input name="win_pre_i" id="win_pre_i" onblur="inputNumV(this,1)" value="5"
+                                   type="text" disabled="disabled">
+                            &nbsp;期利润
+                            <input name="pre_win_pre" id="pre_win_pre" onblur="inputNumV(this,1)"
+                                   value="100" type="text" disabled="disabled">
+                            &nbsp;元，之后利润
+                            <input name="next_win_pre" id="next_win_pre" onblur="inputNumV(this,1)"
+                                   value="50" type="text" disabled="disabled">
+                            &nbsp;元
+                        </span>
+                    </label>
+                </li>
+            </ul>
+            <input type="hidden" name="Jsq-type" id="Jsq-type" value="1">
+            <input type="button" name="but3" value="立即计算" class="s-but-1 Jsq-submit"
+                   onclick="Jsq_load();">
+        </dd>
+    </dl>
+    <div class="Jsq-list-box">
+        <div class="Jsq-title">
+            根据以上条件设置，生成投注方案如下：
+        </div>
+        <ul class="ul-t">
+            <li class="li-1">
+                期数
+            </li>
+            <li class="li-2">
+                倍数
+            </li>
+            <li class="li-3">
+                当期投入
+            </li>
+            <li class="li-4">
+                累计投入
+            </li>
+            <li class="li-5">
+                当期中奖奖金
+            </li>
+            <li class="li-6">
+                合计利润
+            </li>
+            <li class="li-7">
+                利润率
+            </li>
+        </ul>
+        <div class="Jsq_nums">
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/layer_2.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/cp.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var account = '123456@qq.com';
+    if (account != '') {
+        localStorage.setItem("account", account);
+    } else {
+
+    }
+
+//    function xg_shuju(obj) {
+//        $('.shuju_xz').find('.on').removeClass('tag');
+//        $(obj).addClass("tag");
+//        var shuju = $(obj).text();
+//        localStorage.setItem('shuju', shuju);
+//    }
+
+    //显示遮罩层
+    function showMask() {
+        $("#mask").css("height", $(document).height());
+        $("#mask").css("width", $(document).width());
+        $("#mask").show();
+        $("body").css({
+            "height": "100%",
+            "overflow": "hidden"
+        })
+    }
+    //隐藏遮罩层
+    function hideMask() {
+        $("#mask").hide();
+        $("body").css({
+            "height": "auto",
+            "overflow": "auto"
+        })
+    }
+
+    //生成
+    $(function () {
+
+        //进入生成页面
+        $(".s-but-sc").on("click", function () {
+            //倍投修改名字
+            var cityid = GetQueryString('cityid');
+            var title = '山东11选5';
+            if (cityid == 'sd11x5') {
+                title = '山东11选5';
+            } else if (cityid == 'gd11x5') {
+                title = '广东11选5';
+            } else if (cityid == 'jx11x5') {
+                title = '江西11选5';
+            } else if (cityid == 'sh11x5') {
+                title = '上海11选5';
+            }
+            $('.cityname').html(title);
+
+            $("#Sc-box").show();
+
+            //传入点击生成的数据
+            var textnum = '';
+            $('#mc-list-right-t li').each(function () {
+                if ($(this).hasClass('li_new')) {
+                    textnum += $(this).text()+'\n';
+                }
+            });
+            textnum = textnum.substr(0, textnum.length-1);
+            $("#Sc-dmzh").text(textnum);
+            showMask();
+            $('#Sc-dmgs').html('');
+            $('#Sc-hztj').html('');
+            $('#Sc-jieguo-num').text('');
+            $('#Sc-jieguo').text('');
+        });
+        $(".sc_closex").on("click", function () {
+            $('#Sc-box').hide();
+            hideMask();
+        });
+        //匹配个数
+        $(".div-2 .Sc-pipei").on("click", function () {
+            var f = $(this).hasClass("Sc-pipei-t");
+            if (f) {
+                $(this).removeClass("Sc-pipei-t");
+            } else {
+                $(this).addClass("Sc-pipei-t")
+            }
+        });
+        $(".div-1 .Sc-pipei").on("click", function () {
+            var f = $(this).hasClass("Sc-pipei-t");
+            if (f) {
+                $(this).removeClass("Sc-pipei-t");
+            } else {
+                $(this).addClass("Sc-pipei-t")
+            }
+        });
+
+        //beitou
+        $(".Bei_tou").on("click", function () {
+
+            //倍投修改名字
+            var cityid = GetQueryString('cityid');
+            var title = '山东11选5';
+            if (cityid == 'sd11x5') {
+                title = '山东11选5';
+            } else if (cityid == 'gd11x5') {
+                title = '广东11选5';
+            } else if (cityid == 'jx11x5') {
+                title = '江西11选5';
+            } else if (cityid == 'sh11x5') {
+                title = '上海11选5';
+            }
+            $('.cityname').html(title);
+
+            $("#Jsq-box").show();
+            Jsq_load();
+            showMask();
+        });
+
+        $(".Bei_tou_close").on("click", function () {
+            $("#Jsq-box").hide();
+            hideMask();
+        });
+
+        $("#Jsq-types .pointer").on("click", function () {
+            var name = $(this).text();
+
+            if (name == '按利润率计算') {
+                $('input[name="radio"]').get(0).checked = true;
+            } else if (name == '按利润计算') {
+                $('input[name="radio"]').get(2).checked = true;
+            }
+            $(this).addClass("tag").siblings().removeClass("tag");
+            var index = $(this).index();
+            $(this).parent().next().find("ul").eq(index).removeClass("hide").show()
+                .siblings().addClass("hide");
+            $(".Jsq-submit").show();
+        });
+
+        //计算器input 不给填写权限
+        $('.lilv .pointer .fl').on('click', function () {
+            $(this).parent().parent().parent().find(':input').attr("disabled", true);
+            $(this).parent().parent().parent().find(':radio').attr("disabled", false);
+            $(this).next().find(':input').attr("disabled", false);
+        })
+    });
+
+</script>
+<script src="js/trend.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+    //生成
+    $(".s-but-1.s-but-sc").on("click",function () {
+        showDiv($("#Sc-box"));
+    });
+    //<!--倍投计算器-->
+    $(".Bei_tou").on("click",function () {
+        showDiv($("#Jsq-box"));
+    });
+    function showDiv(obj){
+        $(obj).show();
+        center(obj);
+        $(window).scroll(function(){
+            center(obj);
+        });
+        $(window).resize(function(){
+            center(obj);
+        });
+    }
+
+    function center(obj){
+        var windowWidth = document.documentElement.clientWidth;
+        var windowHeight = document.documentElement.clientHeight;
+        var popupHeight = $(obj).height();
+        var popupWidth = $(obj).width();
+        $(obj).css({
+            "position": "absolute",
+            "top": (windowHeight-popupHeight)/2+$(document).scrollTop(),
+            "left": (windowWidth-popupWidth)/2
+        });
+    }
+
+    //滚动的时候自动居中
+    $(window).scroll(function(){
+        showDiv();
+    });
+
+    //窗口变化自动居中
+    $(window).resize(function(){
+        showDiv();
+    });
+
+</script>
+</html>
+
+

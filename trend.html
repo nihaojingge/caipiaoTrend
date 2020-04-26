@@ -1,0 +1,76 @@
+﻿
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>瑞博国际</title>
+    <meta content="迷彩科技" name="keywords"/>
+    <meta content="迷彩科技" name="description"/>
+    <link href="css/public_1.css" rel="stylesheet" type="text/css" />
+    <link href="css/login_1.css" rel="stylesheet" type="text/css" />
+    <link href="css/reg_1.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="login-box hide" id="login-box" style="display: block;">
+    <div class="login-logo fl"></div>
+    <div class="login-title fl">欢迎登陆</div>
+    <div class="loginbox fl">
+        <form id="Form1" name="login" action="../user/login.do"  method="post">
+            <ul>
+                <li><input type="text" name="username" id="user" class="login_input" placeholder="用户名"></li>
+                <li>
+                    <input type="password" name="password" id="pwd" class="login_input" placeholder="密码">
+                    <input type="password" name="pass" id="pass" class="login_input" style="display: none">
+                    <input type="text" name="state" id="state" class="state" style="display: none">
+
+                    <input id="submit" type="submit" style="display: none">
+                </li>
+                <li><input name="button" type="button" class="login_button"  value="登 陆" id="login_button"></li>
+                <li class="li_remember">
+                    <div class="login_remember" id="login_remember">保存信息</div>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery-1.12.2_1.js" ></script>
+<script type="text/javascript" src="js/jquery.md5_1.js" ></script>
+<script type="text/javascript" src="js/layer_1.js" ></script>
+<script type="text/javascript">
+    var message = '请重新登录';
+    if (message != '') {
+        alert(message);
+    }
+
+    var state = '0';
+
+    $(function(){
+        $("#login_remember").on("click",function(){
+            $(this).toggleClass("login_remember_tag")
+        })
+    });
+
+    $('#login_button').click(function () {
+        var password = $('#pwd').val();
+        var username = $('#user').val();
+        console.log(password, username);
+        if (password == '' || username=='') {
+            alert('用户名密码不能为空');
+            return ;
+        }
+
+        if (state != '') {
+            $('#state').val(state);
+        } else {
+            $('#state').val('0');
+        }
+        $('#pass').val($.md5(password));
+        $('#submit').click();
+    })
+
+</script>
+</html>

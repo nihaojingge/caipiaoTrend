@@ -1,0 +1,95 @@
+﻿/*login*/
+body,html{
+    height:100%;
+    background:url(../images/login_bg.jpg) center center;
+}
+ .login-box{
+    position:absolute;
+    top:20%;
+    left:38%;
+    width:345px;
+    padding:0 38px;
+    height:430px;
+    background:#fff;
+    border-radius:6px;
+    box-shadow:0 0 10px #ddd;
+}
+ .login-logo{
+     width: 100%;
+     height: 60px;
+     background: url(../images/login_logo2.png) no-repeat left center;
+     background-size: contain;
+}
+ .login-title{
+    width:338px;
+    padding-left:61px;
+    height:70px;
+    background:url(../images/login_t.png) no-repeat;
+    margin-left:-56px;
+    text-align:left;
+    font:20px/60px "Microsoft yahei";
+    color:#fff;
+}
+ .loginbox{
+    width:100%;
+}
+ .loginbox ul{
+    float:left;
+}
+ .loginbox ul li{
+    margin-top:15px;
+}
+ .loginbox ul li.li_remember{
+    text-align:left;
+}
+ .login_input{
+    width:321px;
+    height:39px;
+    border:1px solid #e5e6e8;
+    padding:5px 10px;
+    font:16px/39px "Microsoft yahei";
+    outline:none;
+    border-radius:6px;
+    box-shadow:0 0 3px #ddd;
+}
+ .login_button{
+    width:343px;
+    height:50px;
+     background:#dc4242;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    color:#fff;
+    font:22px/50px "Microsoft yahei";
+    letter-spacing:5px;
+    border-radius:6px;
+    box-shadow:0 0 3px #ddd;
+}
+ #login_remember{
+    float:left;
+    height:25px;
+    cursor:pointer;
+    padding-left:30px;
+    display:inline;
+    font:18px/25px "Microsoft yahei";
+    color:#333;
+}
+ .login_remember{
+    background:url(../images/login_b2.png) no-repeat left center;
+    background-size:22px;
+}
+ .login_remember_tag{
+    background:url(../images/login_b1.png) no-repeat left center;
+    background-size:22px;
+}
+ .login-txt{
+    float:left;
+    width:343px;
+    height:30px;
+    font:16px/30px "Microsoft yahei";
+    color:#333;
+    text-align:right;
+}
+ .login-txt a{
+    color:#333;
+}
